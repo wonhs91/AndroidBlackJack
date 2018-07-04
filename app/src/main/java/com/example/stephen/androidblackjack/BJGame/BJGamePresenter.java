@@ -19,10 +19,10 @@ public class BJGamePresenter implements BJGameContract.Presenter {
     private static final String TAG = BJGameFragment.class.getName();
 
     @NonNull
-    private Hand playerHand;
+    private final Hand playerHand;
 
     @NonNull
-    private Hand dealerHand;
+    private final Hand dealerHand;
 
     @NonNull
     private final Shoe shoe;

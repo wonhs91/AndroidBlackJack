@@ -6,22 +6,27 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EmptyStackException;
+import java.util.List;
 
 /**
  * Created by stephen on 6/27/2018.
  */
 
 public class Shoe {
+
+
     private static final String TAG = Shoe.class.getName();
 
     final static int DEAFULT_NUM_DECK = 6;
     final static double DEFAULT_SHUFFLE_POINT = .20;
 
-    private int numDeck = DEAFULT_NUM_DECK ;
-    private ArrayList<Card> shoe = new ArrayList();
+    private final int numDeck = DEAFULT_NUM_DECK ;
+    private final List<Card> shoe;
 
     public Shoe() {
-        generateShoe();
+        this.shoe = new ArrayList();
+        populateShoe(numDeck);
+        Collections.shuffle(shoe);
     }
 
     public void generateShoe() {

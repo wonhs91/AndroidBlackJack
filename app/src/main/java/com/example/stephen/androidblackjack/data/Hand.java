@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Hand {
 
-    private List<Card> hand;
+    private final List<Card> hand;
 
     public Hand() {
         hand = new ArrayList();
@@ -17,19 +17,6 @@ public class Hand {
     public void addCard(Card card) {
         hand.add(card);
     }
-
-    /*
-    public void hit() {
-
-    }
-
-    public void stand() {
-
-    }
-
-    public void doubleDown() {
-
-    }*/
 
     public int getHandValue() {
         int value = 0;

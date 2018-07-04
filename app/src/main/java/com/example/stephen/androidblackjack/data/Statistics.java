@@ -4,7 +4,11 @@ package com.example.stephen.androidblackjack.data;
  * Created by stephen on 7/2/2018.
  */
 
-public class Statistics {
+public final class Statistics {
+
+    private int numWin;
+    private int numLoss;
+    private int numPush;
 
     private static Statistics INSTANCE = null;
 
@@ -18,10 +22,6 @@ public class Statistics {
         }
         return INSTANCE;
     }
-
-    private int numWin;
-    private int numLoss;
-    private int numPush;
 
     public int getNumWins() {
         return numWin;

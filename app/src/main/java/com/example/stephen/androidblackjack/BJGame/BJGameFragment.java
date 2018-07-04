@@ -1,6 +1,5 @@
 package com.example.stephen.androidblackjack.BJGame;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -27,6 +26,8 @@ import butterknife.OnClick;
  */
 public class BJGameFragment extends Fragment implements BJGameContract.View{
 
+    private BJGameContract.Presenter presenter;
+
     private static final String TAG = BJGameFragment.class.getName();
 
     @BindView(R.id.playerHand_tv) TextView playerHandTv;
@@ -52,8 +53,6 @@ public class BJGameFragment extends Fragment implements BJGameContract.View{
     public void clearDealerHandTv() {
         dealerHandTv.setText("");
     }
-
-    private BJGameContract.Presenter presenter;
 
     public BJGameFragment() {
         // Required empty public constructor

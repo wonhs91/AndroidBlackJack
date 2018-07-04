@@ -19,6 +19,8 @@ public final class BlackJackUtils {
     })
     public @interface HandState {}
 
+    private BlackJackUtils() {}
+
     public static @HandState String checkHand(Hand hand) {
         if(hand.getHandValue() < 21) {
             return ALIVE;

@@ -6,21 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.stephen.androidblackjack.BJGame.BJGameActivity">
 
-    <FrameLayout
-        android:id="@+id/contentFrame"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_vp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="674dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@android:style/ThemeOverlay.Material"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-    </FrameLayout>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>

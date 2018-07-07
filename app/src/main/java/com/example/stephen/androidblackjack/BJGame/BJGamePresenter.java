@@ -8,7 +8,7 @@ import com.example.stephen.androidblackjack.BlackJackUtils;
 import com.example.stephen.androidblackjack.data.Card;
 import com.example.stephen.androidblackjack.data.Hand;
 import com.example.stephen.androidblackjack.data.Shoe;
-import com.example.stephen.androidblackjack.data.Statistics;
+import com.example.stephen.androidblackjack.data.StatsData;
 
 /**
  * Created by stephen on 6/27/2018.
@@ -30,7 +30,7 @@ public class BJGamePresenter implements BJGameContract.Presenter {
     @NonNull
     private final BJGameContract.View view;
 
-    private final Statistics stats;
+    private final StatsData stats;
 
     private static final String WIN = "win";
     private static final String LOSS = "loss";
@@ -48,7 +48,7 @@ public class BJGamePresenter implements BJGameContract.Presenter {
         playerHand = new Hand();
         dealerHand = new Hand();
 
-        stats = Statistics.getInstance();
+        stats = StatsData.getInstance();
         view.setPresenter(this);
     }
 

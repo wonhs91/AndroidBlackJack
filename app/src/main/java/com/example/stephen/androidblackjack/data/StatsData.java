@@ -4,21 +4,21 @@ package com.example.stephen.androidblackjack.data;
  * Created by stephen on 7/2/2018.
  */
 
-public final class Statistics {
+public final class StatsData {
 
     private int numWin;
     private int numLoss;
     private int numPush;
 
-    private static Statistics INSTANCE = null;
+    private static StatsData INSTANCE = null;
 
-    private Statistics() {
+    private StatsData() {
 
     }
 
-    public static Statistics getInstance() {
+    public static StatsData getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new Statistics();
+            INSTANCE = new StatsData();
         }
         return INSTANCE;
     }

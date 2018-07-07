@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.stephen.androidblackjack.R;
+import com.example.stephen.androidblackjack.Statistics.StatisticsFragment;
+import com.example.stephen.androidblackjack.Statistics.StatisticsPresenter;
 
 import butterknife.BindView;
 
@@ -53,9 +55,9 @@ public class BJGameActivity extends AppCompatActivity {
                     new BJGamePresenter(bjGameFragment);
                     return bjGameFragment;
                 case BJGameActivity.STAT_PAGE:
-                    BJGameFragment bjGameFragment1 = BJGameFragment.newInstance();
-                    new BJGamePresenter(bjGameFragment1);
-                    return bjGameFragment1;
+                    StatisticsFragment statisticsFragment = StatisticsFragment.newInstance();
+                    new StatisticsPresenter(statisticsFragment);
+                    return statisticsFragment;
                 default:
             }
                     return null;
